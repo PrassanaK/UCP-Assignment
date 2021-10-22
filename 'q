@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "interface.h"
+
+char* userInputDay()
+{
+    char* day = NULL;
+    char* option;
+    
+    do
+    {
+        printf("Enter a day");
+        scanf("%s", day);
+
+        if((strcmp(day, "Monday")!=0)||(strcmp(day, "Tuesday")!=0)||(strcmp(day, "Wednesday")!=0)||(strcmp(day, "Thursday")!=0)||(strcmp(day, "Friday")!=0)||(strcmp(day, "Saturday")!=0)||(strcmp(day, "Sunday")!=0))
+        {
+            printf("Please enter a day of the week");
+        }
+        else
+        {
+            option = day;
+        }
+    }while((strcmp(day, "Monday")!=0)||(strcmp(day, "Tuesday")!=0)||(strcmp(day, "Wednesday")!=0)||(strcmp(day, "Thursday")!=0)||(strcmp(day, "Friday")!=0)||(strcmp(day, "Saturday")!=0)||(strcmp(day, "Sunday")!=0));
+    return option;
+}
+
+char* userInputSort()
+{
+    char* sortingMethod = NULL;
+    char* option;
+    do
+    {
+        printf("Enter a sorting method");
+        scanf("%s", sortingMethod);
+
+        if((strcmp(sortingMethod, "name")!=0)||(strcmp(sortingMethod, "time")!=0))
+        {
+            printf("Please enter a valid sorting method");
+        }
+        else
+        {
+            option = sortingMethod;
+        }
+    }while((strcmp(sortingMethod, "name")!=0)||(strcmp(sortingMethod, "time")!=0));
+
+    return option;
+}
